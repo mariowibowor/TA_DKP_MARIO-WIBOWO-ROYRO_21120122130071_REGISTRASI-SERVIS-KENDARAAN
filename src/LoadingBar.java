@@ -34,7 +34,6 @@ public class LoadingBar extends javax.swing.JFrame {
                     if (i == 100) {
                         dispose();
                         mainframe.setVisible(true);
-                        mainframe.halproses.setVisible(false);
                         mainframe.halreg.setVisible(true);
                         mainframe.halkonfirmasi.setVisible(false);
                         mainframe.halpenutup.setVisible(false);
@@ -135,7 +134,6 @@ public class LoadingBar extends javax.swing.JFrame {
             }
         });
     }
-    int i = 0;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel judul;
     public static javax.swing.JProgressBar progress;

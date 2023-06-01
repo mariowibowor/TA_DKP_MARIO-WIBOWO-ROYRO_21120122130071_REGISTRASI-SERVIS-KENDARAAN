@@ -9,11 +9,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import javax.swing.BorderFactory;
-import javax.swing.Icon;
 import javax.swing.JOptionPane;
 import javax.swing.Timer;
-import javax.swing.border.Border;
 
 public class MainWindow extends javax.swing.JFrame {
     
@@ -63,6 +60,7 @@ public class MainWindow extends javax.swing.JFrame {
         logo = new javax.swing.JLabel();
         kelurahantest = new javax.swing.JLabel();
         rttest = new javax.swing.JLabel();
+        rwtest = new javax.swing.JLabel();
         kecamatantest = new javax.swing.JLabel();
         kotatest = new javax.swing.JLabel();
         plattexttest = new javax.swing.JLabel();
@@ -72,12 +70,7 @@ public class MainWindow extends javax.swing.JFrame {
         bg_putih1 = new javax.swing.JLabel();
         tombolkonfirmasi = new javax.swing.JButton();
         hapus = new javax.swing.JButton();
-        about = new javax.swing.JLabel();
         bg1 = new javax.swing.JLabel();
-        halproses = new javax.swing.JLayeredPane();
-        judulproses = new javax.swing.JLabel();
-        prosessimpan = new javax.swing.JProgressBar();
-        bgproses = new javax.swing.JLabel();
         halkonfirmasi = new javax.swing.JLayeredPane();
         ctextnama = new javax.swing.JLabel();
         ctextcatatan = new javax.swing.JLabel();
@@ -122,10 +115,6 @@ public class MainWindow extends javax.swing.JFrame {
         bginfo = new javax.swing.JLabel();
         bgtitle = new javax.swing.JLabel();
         bg2 = new javax.swing.JLabel();
-        halunggah = new javax.swing.JLayeredPane();
-        prosesunggah = new javax.swing.JProgressBar();
-        judulunggah = new javax.swing.JLabel();
-        bgunggah = new javax.swing.JLabel();
         halpenutup = new javax.swing.JLayeredPane();
         logo1 = new javax.swing.JLabel();
         judulpenutup = new javax.swing.JLabel();
@@ -148,7 +137,7 @@ public class MainWindow extends javax.swing.JFrame {
         ucapan.setFont(new java.awt.Font("Pristina", 1, 24)); // NOI18N
         ucapan.setForeground(new java.awt.Color(157, 207, 197));
         ucapan.setText("WELCOME TO");
-        halreg.add(ucapan, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 160, 30));
+        halreg.add(ucapan, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 160, 30));
 
         namabengkel.setFont(new java.awt.Font("Pristina", 1, 24)); // NOI18N
         namabengkel.setForeground(new java.awt.Color(157, 207, 197));
@@ -158,7 +147,7 @@ public class MainWindow extends javax.swing.JFrame {
         akronim.setFont(new java.awt.Font("Pristina", 1, 20)); // NOI18N
         akronim.setForeground(new java.awt.Color(157, 207, 197));
         akronim.setText("(Bikin Bener Motor)");
-        halreg.add(akronim, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 60, 170, 30));
+        halreg.add(akronim, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, 170, 30));
 
         nama.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         nama.setForeground(new java.awt.Color(255, 255, 255));
@@ -175,8 +164,8 @@ public class MainWindow extends javax.swing.JFrame {
                 textnamaKeyReleased(evt);
             }
         });
-        halreg.add(textnama, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, 190, -1));
-        halreg.add(textalamat, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, 190, -1));
+        halreg.add(textnama, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, 190, -1));
+        halreg.add(textalamat, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 190, -1));
 
         angkart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,12 +180,12 @@ public class MainWindow extends javax.swing.JFrame {
                 angkartKeyTyped(evt);
             }
         });
-        halreg.add(angkart, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 170, 60, -1));
+        halreg.add(angkart, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 60, -1));
 
         RT.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         RT.setForeground(new java.awt.Color(255, 255, 255));
         RT.setText("RT");
-        halreg.add(RT, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 20, 20));
+        halreg.add(RT, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 170, 20, 20));
 
         alamat.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         alamat.setForeground(new java.awt.Color(255, 255, 255));
@@ -206,7 +195,7 @@ public class MainWindow extends javax.swing.JFrame {
         RW.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         RW.setForeground(new java.awt.Color(255, 255, 255));
         RW.setText("RW");
-        halreg.add(RW, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, 30, 20));
+        halreg.add(RW, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 200, 30, 20));
 
         angkarw.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -221,24 +210,24 @@ public class MainWindow extends javax.swing.JFrame {
                 angkarwKeyTyped(evt);
             }
         });
-        halreg.add(angkarw, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 170, 60, -1));
+        halreg.add(angkarw, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 200, 60, -1));
 
         kelurahan.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         kelurahan.setForeground(new java.awt.Color(255, 255, 255));
         kelurahan.setText("Kelurahan");
-        halreg.add(kelurahan, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 70, 20));
+        halreg.add(kelurahan, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 70, 20));
 
         textkelurahan.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 textkelurahanKeyReleased(evt);
             }
         });
-        halreg.add(textkelurahan, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 190, -1));
+        halreg.add(textkelurahan, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 190, -1));
 
         kecamatan.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         kecamatan.setForeground(new java.awt.Color(255, 255, 255));
         kecamatan.setText("Kecamatan");
-        halreg.add(kecamatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 70, 20));
+        halreg.add(kecamatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 70, 20));
 
         textkecamatan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -250,24 +239,24 @@ public class MainWindow extends javax.swing.JFrame {
                 textkecamatanKeyReleased(evt);
             }
         });
-        halreg.add(textkecamatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 190, -1));
+        halreg.add(textkecamatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, 190, -1));
 
         textkota.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 textkotaKeyReleased(evt);
             }
         });
-        halreg.add(textkota, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, 190, -1));
+        halreg.add(textkota, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 290, 190, -1));
 
         kota.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         kota.setForeground(new java.awt.Color(255, 255, 255));
         kota.setText("Kab/Kota");
-        halreg.add(kota, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 70, 20));
+        halreg.add(kota, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 70, 20));
 
-        notelp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        notelp.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         notelp.setForeground(new java.awt.Color(255, 255, 255));
         notelp.setText("No. Telp.");
-        halreg.add(notelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, -1, -1));
+        halreg.add(notelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 330, -1, -1));
 
         angkatelp.setForeground(new java.awt.Color(153, 153, 153));
         angkatelp.setText("08xxxxxxxxx");
@@ -292,14 +281,14 @@ public class MainWindow extends javax.swing.JFrame {
                 angkatelpKeyTyped(evt);
             }
         });
-        halreg.add(angkatelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, 190, -1));
+        halreg.add(angkatelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, 190, -1));
 
         textasal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textasalActionPerformed(evt);
             }
         });
-        halreg.add(textasal, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, 190, -1));
+        halreg.add(textasal, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 370, 190, -1));
 
         textplat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -311,17 +300,17 @@ public class MainWindow extends javax.swing.JFrame {
                 textplatKeyReleased(evt);
             }
         });
-        halreg.add(textplat, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 380, 40, -1));
+        halreg.add(textplat, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 410, 40, -1));
 
         platno.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         platno.setForeground(new java.awt.Color(255, 255, 255));
         platno.setText("No. Plat");
-        halreg.add(platno, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 380, 80, 20));
+        halreg.add(platno, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, 80, 20));
 
-        tipe.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        tipe.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         tipe.setForeground(new java.awt.Color(255, 255, 255));
         tipe.setText("Keluhan Singkat");
-        halreg.add(tipe, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 90, 20));
+        halreg.add(tipe, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 100, 20));
 
         angkaplat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -336,7 +325,7 @@ public class MainWindow extends javax.swing.JFrame {
                 angkaplatKeyTyped(evt);
             }
         });
-        halreg.add(angkaplat, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 380, 50, -1));
+        halreg.add(angkaplat, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 410, 50, -1));
 
         textplat2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -348,63 +337,69 @@ public class MainWindow extends javax.swing.JFrame {
                 textplat2KeyReleased(evt);
             }
         });
-        halreg.add(textplat2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 380, 40, -1));
+        halreg.add(textplat2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 410, 40, -1));
 
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logo.png"))); // NOI18N
-        halreg.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 300, 190, 170));
+        halreg.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 350, 190, 170));
 
         kelurahantest.setBackground(new java.awt.Color(255, 255, 255));
         kelurahantest.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         kelurahantest.setForeground(new java.awt.Color(255, 0, 0));
-        halreg.add(kelurahantest, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 200, 160, 20));
+        halreg.add(kelurahantest, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 230, 160, 20));
 
         rttest.setBackground(new java.awt.Color(255, 255, 255));
         rttest.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         rttest.setForeground(new java.awt.Color(255, 0, 0));
-        halreg.add(rttest, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 170, 160, 20));
+        halreg.add(rttest, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, 160, 20));
+
+        rwtest.setBackground(new java.awt.Color(255, 255, 255));
+        rwtest.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        rwtest.setForeground(new java.awt.Color(255, 0, 0));
+        halreg.add(rwtest, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 200, 160, 20));
 
         kecamatantest.setBackground(new java.awt.Color(255, 255, 255));
         kecamatantest.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         kecamatantest.setForeground(new java.awt.Color(255, 0, 0));
-        halreg.add(kecamatantest, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 230, 160, 20));
+        halreg.add(kecamatantest, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 260, 160, 20));
 
         kotatest.setBackground(new java.awt.Color(255, 255, 255));
         kotatest.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         kotatest.setForeground(new java.awt.Color(255, 0, 0));
-        halreg.add(kotatest, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 260, 160, 20));
+        halreg.add(kotatest, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 290, 160, 20));
 
         plattexttest.setBackground(new java.awt.Color(255, 255, 255));
         plattexttest.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         plattexttest.setForeground(new java.awt.Color(255, 0, 0));
-        halreg.add(plattexttest, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 380, 160, 20));
+        halreg.add(plattexttest, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 430, 150, 20));
 
         angkaplattest.setBackground(new java.awt.Color(255, 255, 255));
         angkaplattest.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         angkaplattest.setForeground(new java.awt.Color(255, 0, 0));
-        halreg.add(angkaplattest, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 400, 140, 20));
+        halreg.add(angkaplattest, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 410, 150, 20));
 
         notelptest.setBackground(new java.awt.Color(255, 255, 255));
         notelptest.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         notelptest.setForeground(new java.awt.Color(255, 0, 0));
-        halreg.add(notelptest, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 300, 160, 20));
+        halreg.add(notelptest, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 330, 160, 20));
 
         namatest.setBackground(new java.awt.Color(255, 255, 255));
         namatest.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         namatest.setForeground(new java.awt.Color(255, 0, 0));
-        halreg.add(namatest, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, 160, 20));
+        halreg.add(namatest, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 100, 160, 20));
 
         bg_putih1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bg_gray_25transparent.png"))); // NOI18N
-        halreg.add(bg_putih1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 90, 200, 340));
+        halreg.add(bg_putih1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 90, 220, 370));
 
-        tombolkonfirmasi.setBackground(new java.awt.Color(172, 99, 30));
+        tombolkonfirmasi.setBackground(new java.awt.Color(255, 255, 255));
         tombolkonfirmasi.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        tombolkonfirmasi.setForeground(new java.awt.Color(0, 0, 0));
         tombolkonfirmasi.setText("Konfirmasi");
         tombolkonfirmasi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tombolkonfirmasiActionPerformed(evt);
             }
         });
-        halreg.add(tombolkonfirmasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 440, 130, 40));
+        halreg.add(tombolkonfirmasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 460, 130, 40));
 
         hapus.setText("Hapus");
         hapus.addActionListener(new java.awt.event.ActionListener() {
@@ -412,42 +407,12 @@ public class MainWindow extends javax.swing.JFrame {
                 hapusActionPerformed(evt);
             }
         });
-        halreg.add(hapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 450, -1, -1));
-
-        about.setForeground(new java.awt.Color(255, 255, 255));
-        about.setText("Registrasi Pelanggan \"BBM\" v1.0");
-        about.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        about.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                aboutMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                aboutMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                aboutMouseExited(evt);
-            }
-        });
-        halreg.add(about, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, -1, -1));
+        halreg.add(hapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 480, -1, -1));
 
         bg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bg3.jpg"))); // NOI18N
-        halreg.add(bg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 490));
+        halreg.add(bg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 520));
 
-        getContentPane().add(halreg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 490));
-
-        halproses.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        judulproses.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
-        judulproses.setText("Menyimpan Data. Silahkan Tunggu...");
-        halproses.add(judulproses, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 380, 40));
-
-        prosessimpan.setStringPainted(true);
-        halproses.add(prosessimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 330, 20));
-
-        bgproses.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bg_gray.png"))); // NOI18N
-        halproses.add(bgproses, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 440, 130));
-
-        getContentPane().add(halproses, new org.netbeans.lib.awtextra.AbsoluteConstraints(81, 121, 480, 190));
+        getContentPane().add(halreg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 520));
 
         halkonfirmasi.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -455,146 +420,146 @@ public class MainWindow extends javax.swing.JFrame {
         ctextnama.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         ctextnama.setForeground(new java.awt.Color(255, 255, 255));
         ctextnama.setText("Apakah Anda yakin Data Yang Dimasukkan Benar?");
-        halkonfirmasi.add(ctextnama, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, -1, 41));
+        halkonfirmasi.add(ctextnama, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, -1, 41));
 
         ctextcatatan.setBackground(new java.awt.Color(0, 0, 0));
         ctextcatatan.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         ctextcatatan.setForeground(new java.awt.Color(255, 255, 255));
         ctextcatatan.setText("Silahkan Cek Kembali Data Anda");
-        halkonfirmasi.add(ctextcatatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, -1, -1));
+        halkonfirmasi.add(ctextcatatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, -1, -1));
 
         infonama.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         infonama.setForeground(new java.awt.Color(255, 255, 255));
         infonama.setText("Nama");
-        halkonfirmasi.add(infonama, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, -1, -1));
+        halkonfirmasi.add(infonama, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, -1, -1));
 
         cnama.setBackground(new java.awt.Color(255, 255, 255));
         cnama.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         cnama.setForeground(new java.awt.Color(255, 255, 255));
-        halkonfirmasi.add(cnama, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, 290, 20));
+        halkonfirmasi.add(cnama, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, 290, 20));
 
         bgnama.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bg_darkgray.png"))); // NOI18N
-        halkonfirmasi.add(bgnama, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 370, 20));
+        halkonfirmasi.add(bgnama, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 370, 20));
 
         infoalamat.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         infoalamat.setForeground(new java.awt.Color(255, 255, 255));
         infoalamat.setText("Alamat");
-        halkonfirmasi.add(infoalamat, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, -1, -1));
+        halkonfirmasi.add(infoalamat, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, -1, -1));
 
         calamat.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         calamat.setForeground(new java.awt.Color(255, 255, 255));
-        halkonfirmasi.add(calamat, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 290, 20));
+        halkonfirmasi.add(calamat, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, 290, 20));
 
         bgalamat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bg_darkgray.png"))); // NOI18N
-        halkonfirmasi.add(bgalamat, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 370, 20));
+        halkonfirmasi.add(bgalamat, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 370, 20));
 
         infort.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         infort.setForeground(new java.awt.Color(255, 255, 255));
         infort.setText("RT");
-        halkonfirmasi.add(infort, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, -1, -1));
+        halkonfirmasi.add(infort, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, -1, -1));
 
         crt.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         crt.setForeground(new java.awt.Color(255, 255, 255));
-        halkonfirmasi.add(crt, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 50, 20));
+        halkonfirmasi.add(crt, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 50, 20));
 
         inforw.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         inforw.setForeground(new java.awt.Color(255, 255, 255));
         inforw.setText("RW");
-        halkonfirmasi.add(inforw, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, -1, -1));
+        halkonfirmasi.add(inforw, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, -1, -1));
 
         crw.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         crw.setForeground(new java.awt.Color(255, 255, 255));
-        halkonfirmasi.add(crw, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, 50, 20));
+        halkonfirmasi.add(crw, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 160, 50, 20));
 
         bgrtrw.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bg_darkgray.png"))); // NOI18N
-        halkonfirmasi.add(bgrtrw, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 180, 20));
+        halkonfirmasi.add(bgrtrw, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 180, 20));
 
         infokelurahan.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         infokelurahan.setForeground(new java.awt.Color(255, 255, 255));
         infokelurahan.setText("Kelurahan");
-        halkonfirmasi.add(infokelurahan, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, -1, -1));
+        halkonfirmasi.add(infokelurahan, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, -1, -1));
 
         ckelurahan.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         ckelurahan.setForeground(new java.awt.Color(255, 255, 255));
-        halkonfirmasi.add(ckelurahan, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, 230, 20));
+        halkonfirmasi.add(ckelurahan, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, 230, 20));
 
         bgkelurahan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bg_darkgray.png"))); // NOI18N
-        halkonfirmasi.add(bgkelurahan, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 340, 20));
+        halkonfirmasi.add(bgkelurahan, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 340, 20));
 
         infokecamatan.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         infokecamatan.setForeground(new java.awt.Color(255, 255, 255));
         infokecamatan.setText("Kecamatan");
-        halkonfirmasi.add(infokecamatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, -1, -1));
+        halkonfirmasi.add(infokecamatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, -1, -1));
 
         ckecamatan.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         ckecamatan.setForeground(new java.awt.Color(255, 255, 255));
-        halkonfirmasi.add(ckecamatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, 230, 20));
+        halkonfirmasi.add(ckecamatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 230, 20));
 
         bgkecamatan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bg_darkgray.png"))); // NOI18N
-        halkonfirmasi.add(bgkecamatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 340, 20));
+        halkonfirmasi.add(bgkecamatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 340, 20));
 
         infokabkota.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         infokabkota.setForeground(new java.awt.Color(255, 255, 255));
         infokabkota.setText("Kab/Kota");
-        halkonfirmasi.add(infokabkota, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, -1, -1));
+        halkonfirmasi.add(infokabkota, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, -1, -1));
 
         ckabkota.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         ckabkota.setForeground(new java.awt.Color(255, 255, 255));
-        halkonfirmasi.add(ckabkota, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 230, 20));
+        halkonfirmasi.add(ckabkota, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, 230, 20));
 
         bgkabkota.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bg_darkgray.png"))); // NOI18N
-        halkonfirmasi.add(bgkabkota, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, 340, 20));
+        halkonfirmasi.add(bgkabkota, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 340, 20));
 
         infonotelp.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         infonotelp.setForeground(new java.awt.Color(255, 255, 255));
         infonotelp.setText("No.  Telp.");
-        halkonfirmasi.add(infonotelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, -1, 20));
+        halkonfirmasi.add(infonotelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, -1, 20));
 
         cnotelp1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         cnotelp1.setForeground(new java.awt.Color(255, 255, 255));
-        halkonfirmasi.add(cnotelp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 280, 280, 20));
+        halkonfirmasi.add(cnotelp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 280, 20));
 
         bgnotelp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bg_darkgray.png"))); // NOI18N
-        halkonfirmasi.add(bgnotelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 370, 20));
+        halkonfirmasi.add(bgnotelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 370, 20));
 
         infotipe.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         infotipe.setForeground(new java.awt.Color(255, 255, 255));
         infotipe.setText("Keluhan Singkat");
-        halkonfirmasi.add(infotipe, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, -1, 20));
+        halkonfirmasi.add(infotipe, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, -1, 20));
 
         ctipe.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         ctipe.setForeground(new java.awt.Color(255, 255, 255));
-        halkonfirmasi.add(ctipe, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, 280, 20));
+        halkonfirmasi.add(ctipe, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 280, 20));
 
         bgtipe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bg_darkgray.png"))); // NOI18N
-        halkonfirmasi.add(bgtipe, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 370, 20));
+        halkonfirmasi.add(bgtipe, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 370, 20));
 
         infoplat.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         infoplat.setForeground(new java.awt.Color(255, 255, 255));
         infoplat.setText("No. Plat");
-        halkonfirmasi.add(infoplat, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 70, 20));
+        halkonfirmasi.add(infoplat, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, 70, 20));
 
         ctextplat1.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         ctextplat1.setForeground(new java.awt.Color(255, 255, 255));
-        halkonfirmasi.add(ctextplat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 340, 30, 20));
+        halkonfirmasi.add(ctextplat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 340, 30, 20));
 
         ctextplat2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         ctextplat2.setForeground(new java.awt.Color(255, 255, 255));
-        halkonfirmasi.add(ctextplat2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, 50, 20));
+        halkonfirmasi.add(ctextplat2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 340, 50, 20));
 
         cangkaplat.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         cangkaplat.setForeground(new java.awt.Color(255, 255, 255));
-        halkonfirmasi.add(cangkaplat, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 340, 40, 20));
+        halkonfirmasi.add(cangkaplat, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, 40, 20));
 
         bgplat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bg_darkgray.png"))); // NOI18N
-        halkonfirmasi.add(bgplat, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 370, 20));
+        halkonfirmasi.add(bgplat, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, 370, 20));
 
         persetujuan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 persetujuanActionPerformed(evt);
             }
         });
-        halkonfirmasi.add(persetujuan, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, 260, 40));
+        halkonfirmasi.add(persetujuan, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 370, 260, 40));
 
         catatan1.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         catatan1.setForeground(new java.awt.Color(255, 255, 255));
@@ -604,12 +569,12 @@ public class MainWindow extends javax.swing.JFrame {
                 catatan1MouseClicked(evt);
             }
         });
-        halkonfirmasi.add(catatan1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 370, -1, -1));
+        halkonfirmasi.add(catatan1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, -1, -1));
 
         catatan2.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         catatan2.setForeground(new java.awt.Color(255, 255, 255));
         catatan2.setText("isikan benar dan tanpa rekayasa");
-        halkonfirmasi.add(catatan2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 390, -1, -1));
+        halkonfirmasi.add(catatan2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 390, -1, 20));
 
         kembali.setText("Kembali");
         kembali.addActionListener(new java.awt.event.ActionListener() {
@@ -617,10 +582,10 @@ public class MainWindow extends javax.swing.JFrame {
                 kembaliActionPerformed(evt);
             }
         });
-        halkonfirmasi.add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 440, 90, 30));
+        halkonfirmasi.add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 440, 90, 30));
 
         ketkonfirmasi.setForeground(new java.awt.Color(255, 0, 0));
-        halkonfirmasi.add(ketkonfirmasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 420, 130, 20));
+        halkonfirmasi.add(ketkonfirmasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 420, 130, 20));
 
         konfirmasi2.setText("Konfirmasi");
         konfirmasi2.addActionListener(new java.awt.event.ActionListener() {
@@ -629,38 +594,24 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
         konfirmasi2.setEnabled(false);
-        halkonfirmasi.add(konfirmasi2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 440, 90, 30));
+        halkonfirmasi.add(konfirmasi2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 440, 90, 30));
 
         bg_konfirmasi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bg_putih.png"))); // NOI18N
         bg_konfirmasi.setVisible(false);
-        halkonfirmasi.add(bg_konfirmasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 420, 130, 20));
+        halkonfirmasi.add(bg_konfirmasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 420, 130, 20));
 
         bginfo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bg_textured.png"))); // NOI18N
         bginfo.setText("jLabel1");
-        halkonfirmasi.add(bginfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 390, 390));
+        halkonfirmasi.add(bginfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 390, 390));
 
         bgtitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bg_gray_25transparent.png"))); // NOI18N
         bgtitle.setText("jLabel1");
-        halkonfirmasi.add(bgtitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 80));
+        halkonfirmasi.add(bgtitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 80));
 
         bg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bg3.jpg"))); // NOI18N
-        halkonfirmasi.add(bg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 490));
+        halkonfirmasi.add(bg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 520));
 
-        getContentPane().add(halkonfirmasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 490));
-
-        halunggah.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        prosesunggah.setStringPainted(true);
-        halunggah.add(prosesunggah, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 390, 20));
-
-        judulunggah.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
-        judulunggah.setText("Mengunggah Data. Silahkan Tunggu...");
-        halunggah.add(judulunggah, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 390, 40));
-
-        bgunggah.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bg_gray.png"))); // NOI18N
-        halunggah.add(bgunggah, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 430, 130));
-
-        getContentPane().add(halunggah, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 430, 170));
+        getContentPane().add(halkonfirmasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 520));
 
         halpenutup.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -670,15 +621,15 @@ public class MainWindow extends javax.swing.JFrame {
         judulpenutup.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
         judulpenutup.setForeground(new java.awt.Color(0, 153, 0));
         judulpenutup.setText("Registrasi Berhasil!");
-        halpenutup.add(judulpenutup, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, -1, -1));
+        halpenutup.add(judulpenutup, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, -1, -1));
 
         terimakasih.setFont(new java.awt.Font("Berlin Sans FB", 0, 24)); // NOI18N
         terimakasih.setForeground(new java.awt.Color(0, 153, 0));
         terimakasih.setText(" Terima Kasih ^_^");
-        halpenutup.add(terimakasih, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 200, 180, -1));
+        halpenutup.add(terimakasih, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, 180, -1));
 
         bgjudul.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bg_putih.png"))); // NOI18N
-        halpenutup.add(bgjudul, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, 200, 70));
+        halpenutup.add(bgjudul, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 200, 70));
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
@@ -693,19 +644,19 @@ public class MainWindow extends javax.swing.JFrame {
         deskripsi.setEditable(false);
         jScrollPane1.setViewportView(deskripsi);
 
-        halpenutup.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(219, 240, 330, 90));
+        halpenutup.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 330, 90));
 
         infoprogress.setText(" Halaman ini akan tertutup otomatis setelah beberapa saat...");
         halpenutup.add(infoprogress, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 350, 320, 20));
-        halpenutup.add(progressred, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 350, 340, 20));
+        halpenutup.add(progressred, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 350, 350, 20));
 
         bg3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bg_gray.png"))); // NOI18N
         halpenutup.add(bg3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 550, 270));
 
         bg4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bg3.jpg"))); // NOI18N
-        halpenutup.add(bg4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 490));
+        halpenutup.add(bg4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 520));
 
-        getContentPane().add(halpenutup, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 490));
+        getContentPane().add(halpenutup, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 520));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -720,21 +671,21 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_textnamaKeyReleased
 
     private void angkartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angkartActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_angkartActionPerformed
 
     private void angkartKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_angkartKeyReleased
         PatternCheck cekinput = new PatternCheck("^[0-9]{0,3}$", angkart.getText());
-        rttest.setText(cekinput.cekinput("RT/RW"));
+        rttest.setText(cekinput.cekinput("RT"));
     }//GEN-LAST:event_angkartKeyReleased
 
     private void angkarwActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angkarwActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_angkarwActionPerformed
 
     private void angkarwKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_angkarwKeyReleased
         PatternCheck cekinput = new PatternCheck("^[0-9]{0,3}$", angkarw.getText());
-        rttest.setText(cekinput.cekinput("RT/RW"));
+        rwtest.setText(cekinput.cekinput("RW"));
     }//GEN-LAST:event_angkarwKeyReleased
 
     private void textkelurahanKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textkelurahanKeyReleased
@@ -752,9 +703,8 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_textkecamatanKeyReleased
 
     private void textkotaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textkotaKeyReleased
-        // TODO add your handling code here:
         PatternCheck cekinput = new PatternCheck("^[A-Z a-z]{0,100}$",textkota.getText());
-        kotatest.setText(cekinput.cekinput("Kota"));
+        kotatest.setText(cekinput.cekinput("Kab/Kota"));
     }//GEN-LAST:event_textkotaKeyReleased
 
     private void angkatelpKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_angkatelpKeyReleased
@@ -789,52 +739,33 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_textplat2ActionPerformed
 
     private void textplat2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textplat2KeyReleased
-        // TODO add your handling code here:
         PatternCheck cekinput = new PatternCheck("^[A-za-z]{0,2}$",textplat2.getText());
         plattexttest.setText(cekinput.cekinput("Kode"));
     }//GEN-LAST:event_textplat2KeyReleased
 
     private void tombolkonfirmasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolkonfirmasiActionPerformed
-        // TODO add your handling code here:
         if(verifyField()) {
-            halproses.setVisible(true);
-            halreg.setVisible(true);
-            tmp.start();   
+            halreg.setVisible(false);
+            halkonfirmasi.setVisible(true);
+            halpenutup.setVisible(false);        
+            cnama.setText(textnama.getText());
+            calamat.setText(textalamat.getText());
+            crt.setText(angkart.getText());
+            crw.setText(angkarw.getText());
+            ckelurahan.setText(textkelurahan.getText());
+            ckecamatan.setText(textkecamatan.getText());
+            ckabkota.setText(textkota.getText());
+            cnotelp1.setText(angkatelp.getText());
+            ctipe.setText(textasal.getText());
+            ctextplat1.setText(textplat.getText());
+            cangkaplat.setText(angkaplat.getText());
+            ctextplat2.setText(textplat2.getText());   
         }
         
-        cnama.setText(textnama.getText());
-        calamat.setText(textalamat.getText());
-        crt.setText(angkart.getText());
-        crw.setText(angkarw.getText());
-        ckelurahan.setText(textkelurahan.getText());
-        ckecamatan.setText(textkecamatan.getText());
-        ckabkota.setText(textkota.getText());
-        cnotelp1.setText(angkatelp.getText());
-        ctipe.setText(textasal.getText());
-        ctextplat1.setText(textplat.getText());
-        cangkaplat.setText(angkaplat.getText());
-        ctextplat2.setText(textplat2.getText());
+
     }//GEN-LAST:event_tombolkonfirmasiActionPerformed
     
-    int a = 0;
-    Timer tmp = new Timer(50, new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            prosessimpan.setValue(a++);
-            if(a >= 100){
-                halproses.setVisible(false);
-                halreg.setVisible(false);
-                halunggah.setVisible(false);
-                halkonfirmasi.setVisible(true);
-                halpenutup.setVisible(false);
-                tmp.stop();
-                prosessimpan.setValue(a = 0);
-            }
-        }
-    });
-    
     private void persetujuanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_persetujuanActionPerformed
-        // TODO add your handling code here:
         if (persetujuan.isSelected()) {
             konfirmasi2.setEnabled(true);
             ketkonfirmasi.setText(" Silahkan klik konfirmasi");
@@ -848,7 +779,6 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_persetujuanActionPerformed
 
     private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliActionPerformed
-        // TODO add your handling code here:
         halkonfirmasi.setVisible(false);
         halreg.setVisible(true);
         konfirmasi2.setEnabled(false);
@@ -858,9 +788,10 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_kembaliActionPerformed
 
     private void konfirmasi2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_konfirmasi2ActionPerformed
-        // TODO add your handling code here
-        halunggah.setVisible(true);
-        pu.start();
+        halreg.setVisible(false);
+        halkonfirmasi.setVisible(false);
+        halpenutup.setVisible(true);
+        tm.start();
         
         textnama.setText("");
         textalamat.setText("");
@@ -884,33 +815,13 @@ public class MainWindow extends javax.swing.JFrame {
         angkaplattest.setText("");
     }//GEN-LAST:event_konfirmasi2ActionPerformed
 
-    int b = 0;
-    Timer pu = new Timer(50, new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            prosesunggah.setValue(b++);
-            if(b >= 100){
-                halproses.setVisible(false);
-                halreg.setVisible(false);
-                halkonfirmasi.setVisible(false);
-                halunggah.setVisible(false);
-                halpenutup.setVisible(true);
-                pu.stop();
-                tm.start();
-                prosessimpan.setValue(b = 0);
-            }
-        }
-    });
-    
     int i = 0;
     Timer tm = new Timer(100, new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
             progressred.setValue(i++);
             if(i >= 100){
-                halproses.setVisible(false);
                 halreg.setVisible(true);
-                halunggah.setVisible(false);
                 halkonfirmasi.setVisible(false);
                 halpenutup.setVisible(false);
                 konfirmasi2.setEnabled(false);
@@ -923,8 +834,8 @@ public class MainWindow extends javax.swing.JFrame {
         }
     });
 
+
     private void hapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hapusActionPerformed
-        // TODO add your handling code here:
         int opsi = JOptionPane.showOptionDialog(null, " Apakah Anda Yakin\n Ingin Menghapus\n Semuanya?", "Bersihkan Form", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
         switch(opsi){
             case JOptionPane.OK_OPTION:
@@ -956,7 +867,6 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_hapusActionPerformed
 
     private void angkatelpFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_angkatelpFocusGained
-        // TODO add your handling code here:
         if(angkatelp.getText().trim().equals("08xxxxxxxxx")) {
             angkatelp.setText("");
             angkatelp.setForeground(Color.BLACK);
@@ -964,11 +874,10 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_angkatelpFocusGained
 
     private void angkatelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angkatelpActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_angkatelpActionPerformed
 
     private void angkatelpFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_angkatelpFocusLost
-        // TODO add your handling code here:
         if(angkatelp.getText().trim().equals("") || 
             angkatelp.getText().trim().toLowerCase().equals("08xxxxxxxxx")) {
             angkatelp.setText("08"+"xxxxxxxxx");
@@ -978,53 +887,32 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_angkatelpFocusLost
 
     private void angkartKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_angkartKeyTyped
-        // TODO add your handling code here:
         if(!Character.isDigit(evt.getKeyChar())){
             evt.consume();
         }
     }//GEN-LAST:event_angkartKeyTyped
 
     private void angkarwKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_angkarwKeyTyped
-        // TODO add your handling code here:
         if(!Character.isDigit(evt.getKeyChar())){
             evt.consume();
         }
     }//GEN-LAST:event_angkarwKeyTyped
 
     private void angkatelpKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_angkatelpKeyTyped
-        // TODO add your handling code here:
         if(!Character.isDigit(evt.getKeyChar())){
             evt.consume();
         }
     }//GEN-LAST:event_angkatelpKeyTyped
 
     private void angkaplatKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_angkaplatKeyTyped
-        // TODO add your handling code here:
         if(!Character.isDigit(evt.getKeyChar())){
             evt.consume();
         }
     }//GEN-LAST:event_angkaplatKeyTyped
 
     private void catatan1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_catatan1MouseClicked
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_catatan1MouseClicked
-
-    private void aboutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aboutMouseEntered
-        // TODO add your handling code here:
-        Border label_border = BorderFactory.createMatteBorder(0, 0, 1, 0, Color.WHITE);
-        about.setBorder(label_border);
-    }//GEN-LAST:event_aboutMouseEntered
-
-    private void aboutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aboutMouseExited
-        // TODO add your handling code here:
-        about.setBorder(null);
-    }//GEN-LAST:event_aboutMouseExited
-
-    private void aboutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aboutMouseClicked
-        // TODO add your handling code here:
-        Icon icon = new javax.swing.ImageIcon(getClass().getResource("/image/logo.png"));
-        JOptionPane.showMessageDialog(null, " Aplikasi Registrasi\n Pelanggan 'BBM'\n\n By Mario", "About",2 , icon);
-    }//GEN-LAST:event_aboutMouseClicked
 
     public boolean verifyField() {
         String tnama = textnama.getText();
@@ -1041,6 +929,7 @@ public class MainWindow extends javax.swing.JFrame {
         String tplat2 = textplat2.getText();
         String namat = namatest.getText();
         String rtt = rttest.getText();
+        String rwt = rwtest.getText();
         String kelurahant = kelurahantest.getText();
         String kecamatant = kecamatantest.getText();
         String kotat = kotatest.getText();
@@ -1051,11 +940,11 @@ public class MainWindow extends javax.swing.JFrame {
         
         if(tnama.trim().equals("") || talamat.trim().equals("") || art.trim().equals("")
             || arw.trim().equals("") || tkelurahan.trim().equals("") || tkecamatan.trim().equals("")
-            || tkota.trim().equals("") || atelp.trim().equals("") || ttipe.trim().equals("") || tplat.trim().equals("")
-            || aplat.trim().equals("") || tplat2.trim().equals("") || namat.trim().equals("Nama Tidak Valid")
-            || rtt.trim().equals("RT Tidak Valid") || rtt.trim().equals("RW Tidak Valid") || rtt.trim().equals("RT/RW Tidak Valid") || kelurahant.trim().equals("Kelurahan Tidak Valid")
-            || kecamatant.trim().equals("Kecamatan Tidak Valid") || kotat.trim().equals("Kab"+"/"+"Kota Tidak Valid") || notelpt.trim().equals("08"+"xxxxxxxxx")
-            || plattextt.trim().equals("Kode Tidak Valid") || angkaplatt.trim().equals("Angka Tidak Valid")) {
+            || tkota.trim().equals("") || atelp.trim().equals("08xxxxxxxxx") || ttipe.trim().equals("") || tplat.trim().equals("")
+            || aplat.trim().equals("") || tplat2.trim().equals("") || !namat.trim().equals("")
+            || !rtt.trim().equals("") || !rwt.trim().equals("") || !kelurahant.trim().equals("")
+            || !kecamatant.trim().equals("") || !kotat.trim().equals("") || !notelpt.trim().equals("")
+            || !plattextt.trim().equals("") || !angkaplatt.trim().equals("")) {
             
             JOptionPane.showMessageDialog(null, "Harap cek kembali data yang diisikan","Peringatan",2);
             return false;
@@ -1065,9 +954,6 @@ public class MainWindow extends javax.swing.JFrame {
         }
     }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -1095,7 +981,6 @@ public class MainWindow extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MainWindow().setVisible(true);
@@ -1126,7 +1011,6 @@ public class MainWindow extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel RT;
     private javax.swing.JLabel RW;
-    private javax.swing.JLabel about;
     private javax.swing.JLabel akronim;
     private javax.swing.JLabel alamat;
     private javax.swing.JTextField angkaplat;
@@ -1149,11 +1033,9 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel bgnama;
     private javax.swing.JLabel bgnotelp;
     private javax.swing.JLabel bgplat;
-    private javax.swing.JLabel bgproses;
     private javax.swing.JLabel bgrtrw;
     private javax.swing.JLabel bgtipe;
     private javax.swing.JLabel bgtitle;
-    private javax.swing.JLabel bgunggah;
     public javax.swing.JLabel calamat;
     public javax.swing.JLabel cangkaplat;
     private javax.swing.JLabel catatan1;
@@ -1173,9 +1055,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextArea deskripsi;
     public javax.swing.JLayeredPane halkonfirmasi;
     public javax.swing.JLayeredPane halpenutup;
-    public javax.swing.JLayeredPane halproses;
     public javax.swing.JLayeredPane halreg;
-    private javax.swing.JLayeredPane halunggah;
     private javax.swing.JButton hapus;
     private javax.swing.JLabel infoalamat;
     private javax.swing.JLabel infokabkota;
@@ -1190,8 +1070,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel infotipe;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel judulpenutup;
-    private javax.swing.JLabel judulproses;
-    private javax.swing.JLabel judulunggah;
     private javax.swing.JLabel kecamatan;
     public javax.swing.JLabel kecamatantest;
     private javax.swing.JLabel kelurahan;
@@ -1212,9 +1090,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel platno;
     public javax.swing.JLabel plattexttest;
     private javax.swing.JProgressBar progressred;
-    private javax.swing.JProgressBar prosessimpan;
-    private javax.swing.JProgressBar prosesunggah;
     public javax.swing.JLabel rttest;
+    public javax.swing.JLabel rwtest;
     private javax.swing.JLabel terimakasih;
     private javax.swing.JTextField textalamat;
     private javax.swing.JTextField textasal;
